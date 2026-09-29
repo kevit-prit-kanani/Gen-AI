@@ -1,0 +1,11 @@
+id,ticket,correct_label,baseline_prediction,improved_prediction,baseline_correct,improved_correct
+1,I was charged twice for my subscription this month.,billing,billing,billing,True,True
+2,The app crashes whenever I try to upload a photo.,technical,technical,technical,True,True
+3,I forgot my password and cannot log into my account.,account,account,account,True,True
+4,I want to cancel my subscription immediately.,cancellation,cancellation,cancellation,True,True
+5,Why did you charge me $49.99 when I expected $29.99?,billing,billing,billing,True,True
+6,The website gives me a 500 error when I try to open my dashboard.,technical,technical,technical,True,True
+7,I changed my email address but I cannot access my account anymore.,account,account,account,True,True
+8,Please stop renewing my monthly plan.,cancellation,cancellation,cancellation,True,True
+9,My credit card was declined when I tried to pay for the upgrade.,billing,billing,billing,True,True
+10,The mobile application freezes every time I open the settings page.,technical,technical,technical,True,True

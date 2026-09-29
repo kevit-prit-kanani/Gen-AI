@@ -1,0 +1,24 @@
+[project]
+name = "gen-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "kevit-prit-kanani", email = "prit.kanani@kevit.io" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "anthropic>=1.9.0",
+    "google-genai>=2.25.0",
+    "openai>=3.20.0",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
+    "tiktoken>=0.14.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false
