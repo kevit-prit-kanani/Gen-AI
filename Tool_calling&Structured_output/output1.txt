@@ -1,0 +1,62 @@
+gemini 3.5 flash:
+
+======================================================================
+USER: Who is this user prit.kanani@kevit.io?
+ARGUMENTS: {'email': 'prit.kanani@kevit.io'}
+MODEL: Based on the email address prit.kanani@kevit.io, the user's name is **prit** and their gender is listed as **Male**.
+
+======================================================================
+USER: Give me the weather data for today
+MODEL: I'm sorry, but I don't have access to real-time weather data.
+
+======================================================================
+USER: Hello, what's your name?
+MODEL: I am Gemini, a large language model built by Google. How can I help you today?
+
+======================================================================
+USER: Hey, I am mayur. Can you tell me about my email?
+MODEL: Sure, Mayur! Could you please provide your email address so I can look up the information for you?
+
+======================================================================
+USER: The following is my email. Give me the details about myself: 'kevit.kevit@gmail.com'
+ARGUMENTS: {'email': 'kevit.kevit@gmail.com'}
+MODEL: I was unable to find any user details associated with the email address **kevit.kevit@gmail.com**.
+
+======================================================================
+USER: Is there any user existing called jayesh@gmail.com?
+ARGUMENTS: {'email': 'jayesh@gmail.com'}
+MODEL: Yes, there is a user with that email. Their name is Jayesh, and they are registered as Male.
+
+======================================================================
+USER: 
+---------------------------------------------------------------------------
+CreateInteractionClientError              Traceback (most recent call last)
+File ~/Prit/python/Gen-AI/.venv/lib/python3.14/site-packages/google/genai/_gaos/interactions.py:618, in Interactions.create(self, request, api_version, extra_headers, extra_query, extra_body, timeout, **body_kwargs)
+    617 try:
+--> 618     return _speakeasy_parse_response(http_res)
+    619 except Exception as parse_exc_:
+
+File ~/Prit/python/Gen-AI/.venv/lib/python3.14/site-packages/google/genai/_gaos/interactions.py:534, in Interactions.create.<locals>._speakeasy_parse_response(http_res)
+    531     response_data = unmarshal_json_response(
+    532         errors.CreateInteractionClientErrorData, http_res, http_res_text
+    533     )
+--> 534     raise errors.CreateInteractionClientError(
+    535         response_data, http_res, http_res_text
+    536     )
+    537 except errors.ResponseValidationError as e:
+
+CreateInteractionClientError: Missing text in content of type text.
+
+The above exception was the direct cause of the following exception:
+
+BadRequestError                           Traceback (most recent call last)
+Cell In[28], line 8
+      4     print("\n" + "=" * 70)
+      5     print("USER:", query)
+      6 
+...
+     92 if parse_error is exc:
+     93     raise exc.with_traceback(exc.__traceback__)
+---> 94 raise parse_error from exc
+
+BadRequestError: Error code: 400 - {'error': {'message': 'Missing text in content of type text.', 'code': 'invalid_request'}}
